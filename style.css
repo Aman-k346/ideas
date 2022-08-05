@@ -3,14 +3,14 @@
 * {
   padding: 0;
   margin: 0;
-  scroll-snap-type: y proximity;
+  
 }
 body,
 html {
   height: 100%;
   background-image: url("./background.avif");
   height: 100%;
-
+scroll-snap-type: y proximity;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

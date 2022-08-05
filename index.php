@@ -19,11 +19,17 @@
       <div class="title">Ideas</div>
       <hr />
       <ul>
-        <li class="list">
-          tium, harum pariatur rem, minima accusantium reprehenderit laudantium
-          vero tempora molestias amet, aliquam nemo voluptate.
-          <hr />
-        </li>
+        <?php 
+        require_once 'connect.php';
+        $data = $dbh->prepare("SELECT * FROM author");
+        $data->execute();
+        $data1 = $data->fetchAll();
+        foreach ($data1 as $value) {
+        echo "<li class='list'>".
+        $value['data']."<b style='font-size:27px;'>by ".$value['name']."</b><hr />
+      </li>";
+        }
+        ?>
       </ul>
     </section>
     <section id="#submit">
@@ -32,7 +38,7 @@
         <div class="submit an">an</div>
         <div class="sub submit">idea</div>
         <br />
-        <div class="button">submit</div>
+        <div class="button" onclick="window.location.href='create.php'">submit</div>
       </div>
     </section>
   </body>
