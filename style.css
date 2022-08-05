@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Kaushan+Script&family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  scroll-snap-type: y proximity;
+}
+body,
+html {
+  height: 100%;
+  background-image: url("./background.avif");
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.bg {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: contrast(172%);
+}
+.ideas {
+  font-size: 99px;
+  font-family: "Kaushan Script", cursive;
+}
+.ideas::selection {
+  background-color: rgb(32, 32, 32);
+  color: antiquewhite;
+}
+.ideas::before {
+  content: " ";
+  background-color: rgb(0, 0, 0);
+  height: 4px;
+  width: 55px;
+  display: inline-block;
+  transition: 0.2s;
+}
+.ideas:hover::before {
+  height: 4px;
+  width: 5px;
+}
+.btn {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+}
+
+@media only screen and (max-width: 230px) {
+  .ideas {
+    font-size: 60px;
+    color: springgreen;
+  }
+}
+
+@media only screen and (min-width: 230px) {
+  .btn {
+    font-size: 33px;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+  }
+}
+#header {
+  height: 100%;
+  width: 100%;
+}
+section {
+  scroll-snap-align: start;
+  transition: 0.3s;
+}
+#ideas {
+  text-align: center;
+  background: linear-gradient(springgreen, rgb(20, 232, 126));
+  border-radius: 13px;
+  margin: 5px;
+}
+.title {
+  font-size: 60px;
+  padding: 0;
+  font-family: "Gloria Hallelujah", cursive;
+  cursor: pointer;
+}
+.title::after {
+  display: inline-block;
+  content: "";
+  width: 0ch;
+  background-color: aqua;
+  transition: ease-in-out 0.2s;
+}
+.title:hover::after {
+  height: 4px;
+  width: 7ch;
+}
+.list {
+  list-style: decimal;
+}
+
+hr {
+  margin: 9px;
+}
+.submit-bg {
+  background: url("./question-bg.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  flex-wrap: wrap;
+}
+.submit {
+  color: #187fe8;
+  text-transform: capitalize;
+  margin: 0.2ch;
+  margin-bottom: 116px;
+  text-shadow: 0px 3px 6px #ff7e93;
+  font-family: monospace;
+  float: left;
+  font-family: "Kaushan Script", cursive;
+}
+
+@media only screen and (max-width: 957px) {
+  .submit {
+    color: #ff7e93;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .submit {
+    margin-bottom: 0px;
+  }
+}
+.button {
+  background-color: pink;
+  border-radius: 3px;
+  text-align: center;
+  padding: 5px;
+  font-size: 30px;
+  font-family: monospace;
+  position: absolute;
+  margin-top: 9px;
+  transition: 0.1s;
+}
+.button::before {
+  margin: 5px;
+}
+.button:hover {
+  background-color: #ff7e93;
+  cursor: pointer;
+  box-shadow: 3px 4px ;
+}
